@@ -9,6 +9,7 @@ description: >
   video/image/audio from a URL, remove watermarks, remove Sora watermark,
   or mentions MeowLoad/哼哼猫.
 homepage: https://www.henghengmao.com
+license: MIT
 tags:
   - video
   - downloader
