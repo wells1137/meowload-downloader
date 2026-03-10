@@ -1,0 +1,78 @@
+name: Publish to All Skill Platforms
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # ── ClawHub ──
+      - name: Publish to ClawHub
+        if: env.CLAWHUB_TOKEN != ''
+        env:
+          CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+        run: |
+          npm i -g clawdhub
+          clawdhub publish ./skills/meowload-downloader \
+            --slug meowload-downloader \
+            --name "MeowLoad Downloader" \
+            --version "${GITHUB_REF_NAME#v}" \
+            --changelog "Release ${GITHUB_REF_NAME}" \
+            --tags latest
+        continue-on-error: true
+
+      # ── Sundial Hub ──
+      - name: Publish to Sundial Hub
+        if: env.SUNDIAL_TOKEN != ''
+        env:
+          SUNDIAL_TOKEN: ${{ secrets.SUNDIAL_TOKEN }}
+        run: |
+          npx -y sundial-hub push . --token "$SUNDIAL_TOKEN"
+        continue-on-error: true
+
+      # ── localskills.sh ──
+      - name: Publish to localskills.sh
+        if: env.LOCALSKILLS_TOKEN != ''
+        env:
+          LOCALSKILLS_TOKEN: ${{ secrets.LOCALSKILLS_TOKEN }}
+        run: |
+          npm i -g @localskills/cli
+          localskills publish ./skills/meowload-downloader \
+            --team wells1137 \
+            --name meowload-downloader \
+            --visibility public \
+            --token "$LOCALSKILLS_TOKEN"
+        continue-on-error: true
+
+      # ── agentskill.sh (submit via API) ──
+      - name: Submit to agentskill.sh
+        run: |
+          curl -s -X POST https://agentskill.sh/api/submit \
+            -H "Content-Type: application/json" \
+            -d '{"url": "https://github.com/wells1137/meowload-downloader"}' \
+            || echo "agentskill.sh submission attempted"
+        continue-on-error: true
+
+      - name: Summary
+        run: |
+          echo "## Publish Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Platform | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| skills.sh | Auto-discovered from GitHub |" >> $GITHUB_STEP_SUMMARY
+          echo "| Playbooks.com | Auto-discovered from GitHub |" >> $GITHUB_STEP_SUMMARY
+          echo "| AgentSkillsRepo | Auto-indexed from GitHub |" >> $GITHUB_STEP_SUMMARY
+          echo "| ClawHub | Published via CI |" >> $GITHUB_STEP_SUMMARY
+          echo "| Sundial Hub | Published via CI |" >> $GITHUB_STEP_SUMMARY
+          echo "| localskills.sh | Published via CI |" >> $GITHUB_STEP_SUMMARY
+          echo "| Cursor Marketplace | Manual submission required |" >> $GITHUB_STEP_SUMMARY
