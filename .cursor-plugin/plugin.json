@@ -1,0 +1,24 @@
+{
+  "name": "meowload-downloader",
+  "description": "Download videos, images, and audio without watermarks from 999+ platforms (YouTube, TikTok, Instagram, Twitter, Bilibili, Sora2, etc.). Built-in API key, zero config — install and use immediately.",
+  "version": "1.0.0",
+  "author": {
+    "name": "wells"
+  },
+  "homepage": "https://www.henghengmao.com",
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "downloader",
+    "watermark",
+    "tiktok",
+    "youtube",
+    "instagram",
+    "twitter",
+    "bilibili",
+    "meowload",
+    "media",
+    "sora2"
+  ],
+  "logo": "assets/logo.svg"
+}
