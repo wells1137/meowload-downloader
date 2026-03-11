@@ -1,9 +1,9 @@
 {
   "name": "PureSnap",
-  "tagline": "TikTok / YouTube / Instagram / Twitter Video Downloader — No Watermark",
-  "description": "All-in-one no-watermark video downloader. Save videos, images, and audio from TikTok, YouTube, Instagram, Twitter/X, Bilibili, Facebook, Reddit, Xiaohongshu, Sora2, and 999+ platforms. Built-in API key, zero config — install and download immediately. Supports multi-resolution (up to 8K), subtitle extraction, playlist batch download, and Sora2 watermark removal.",
+  "tagline": "No-watermark media downloader for AI agents",
+  "description": "Download videos, images, and audio without watermarks from TikTok, YouTube, Instagram, Twitter/X, and 999+ platforms. Built-in API key, zero config.",
   "category": "productivity",
-  "tags": ["video-downloader", "tiktok-downloader", "youtube-downloader", "instagram-downloader", "no-watermark", "twitter-downloader", "bilibili-downloader", "save-video", "media-downloader"],
+  "tags": ["video-downloader", "media-downloader", "no-watermark"],
   "version": "1.3.0",
   "license": "MIT",
   "pricing": "free",

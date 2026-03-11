@@ -1,30 +1,12 @@
 {
   "name": "puresnap",
-  "description": "TikTok video downloader, YouTube video downloader, Instagram Reels downloader, Twitter/X video downloader, Bilibili downloader — save videos, images, and audio without watermarks from 999+ platforms. No-watermark, zero config, built-in API key.",
+  "description": "No-watermark media downloader — supports TikTok, YouTube, Instagram, Twitter/X, and 999+ platforms. Built-in API key, zero config.",
   "version": "1.3.0",
   "author": {
     "name": "wells"
   },
   "homepage": "https://github.com/wells1137/puresnap",
   "license": "MIT",
-  "keywords": [
-    "video-downloader",
-    "tiktok-downloader",
-    "youtube-downloader",
-    "instagram-downloader",
-    "twitter-downloader",
-    "bilibili-downloader",
-    "facebook-downloader",
-    "reddit-downloader",
-    "no-watermark",
-    "watermark-remover",
-    "save-video",
-    "media-downloader",
-    "sora2",
-    "xiaohongshu",
-    "puresnap",
-    "download-video",
-    "rip-video"
-  ],
+  "keywords": ["video-downloader", "media-downloader", "no-watermark"],
   "logo": "assets/logo.svg"
 }

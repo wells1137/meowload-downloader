@@ -1,11 +1,11 @@
 {
   "name": "puresnap",
   "version": "1.3.0",
-  "description": "TikTok / YouTube / Instagram / Twitter video downloader — save videos, images, audio without watermarks from 999+ platforms. No-watermark, zero config.",
+  "description": "No-watermark media downloader for AI agents — supports TikTok, YouTube, Instagram, Twitter/X, and 999+ platforms.",
   "author": "wells1137",
   "license": "MIT",
   "permissions": ["network"],
   "entry": "skills/puresnap/SKILL.md",
-  "tags": ["video-downloader", "tiktok-downloader", "youtube-downloader", "instagram-downloader", "twitter-downloader", "bilibili-downloader", "no-watermark", "save-video", "media-downloader", "sora2"],
+  "tags": ["video-downloader", "media-downloader", "no-watermark"],
   "models": ["claude-*", "gpt-*", "gemini-*"]
 }
