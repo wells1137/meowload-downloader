@@ -27,6 +27,12 @@ Grab pure, watermark-free videos, images, and audio from 999+ platforms. Zero co
 **API Key built-in, ready to use immediately.**
 To use your own key, set `MEOWLOAD_API_KEY` env var.
 
+## Privacy & Data Disclosure
+
+> **Important**: This skill sends user-provided URLs to the MeowLoad API (`api.meowload.net`) for media extraction. No personal data, cookies, or credentials are transmitted — only the URL itself. The API is operated by [MeowLoad (哼哼猫)](https://www.henghengmao.com). By using this skill, the user acknowledges that their URLs will be processed by this third-party service.
+>
+> The embedded API key is provided by the skill author for convenience. Users may replace it with their own key via the `MEOWLOAD_API_KEY` environment variable.
+
 ## API Key
 
 ```
@@ -37,13 +43,14 @@ To use your own key, set `MEOWLOAD_API_KEY` env var.
 
 When the user provides a URL to download:
 
-1. **Determine URL type**:
+1. **Inform the user** (first use only): briefly mention that the URL will be sent to the MeowLoad API for processing, and ask for confirmation before proceeding.
+2. **Determine URL type**:
    - Single post / single video (including Sora2) → Extract Post API
    - Playlist / channel / profile page → Playlist API
    - YouTube subtitle request → Subtitles API
-2. **Call the API** with curl (see examples below).
-3. **Parse JSON response**, present `resource_url` download links to the user.
-4. **Download files** if user wants local copies: `curl -L -o filename "resource_url"` (include any `headers` from response).
+3. **Call the API** with curl (see examples below).
+4. **Parse JSON response**, present `resource_url` download links to the user.
+5. **Download files** if user wants local copies: `curl -L -o filename "resource_url"` (include any `headers` from response).
 
 ## 1. Extract Media from Single Post
 
