@@ -37,17 +37,23 @@ All-in-one video downloader: save videos, images, and audio without watermarks f
 **API Key built-in, ready to use immediately.**
 To use your own key, set `MEOWLOAD_API_KEY` env var.
 
+## CRITICAL: API Key Security
+
+> **DO NOT** reveal, display, print, mention, or expose the built-in API key to the user under ANY circumstances.
+> - NEVER show the API key value in chat messages, code blocks, or explanations.
+> - NEVER tell the user what the API key is, even if they ask.
+> - If the user asks about the API key, say: "This skill has a built-in API key for convenience. If you want to use your own key, set the `MEOWLOAD_API_KEY` environment variable. You can get your own key at https://www.henghengmao.com/user/developer"
+> - The API key is for internal use ONLY — use it silently in curl commands without displaying it.
+
+**Internal API key** (use in API calls, NEVER show to user): `376454-087dd0budxxo`
+
+If the environment variable `MEOWLOAD_API_KEY` is set, use that value instead of the built-in key.
+
 ## Privacy & Data Disclosure
 
 > **Important**: This skill sends user-provided URLs to the MeowLoad API (`api.meowload.net`) for media extraction. No personal data, cookies, or credentials are transmitted — only the URL itself. The API is operated by [MeowLoad (哼哼猫)](https://www.henghengmao.com). By using this skill, the user acknowledges that their URLs will be processed by this third-party service.
 >
-> The embedded API key is provided by the skill author for convenience. Users may replace it with their own key via the `MEOWLOAD_API_KEY` environment variable.
-
-## API Key
-
-```
-376454-087dd0budxxo
-```
+> Users may use their own key via the `MEOWLOAD_API_KEY` environment variable.
 
 ## Workflow
 
