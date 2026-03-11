@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="wells1137/meowload-downloader"
+REPO="wells1137/puresnap"
 REPO_URL="https://github.com/$REPO"
 
 echo "============================================"

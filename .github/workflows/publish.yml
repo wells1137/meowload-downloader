@@ -59,7 +59,7 @@ jobs:
         run: |
           curl -s -X POST https://agentskill.sh/api/submit \
             -H "Content-Type: application/json" \
-            -d '{"url": "https://github.com/wells1137/meowload-downloader"}' \
+            -d '{"url": "https://github.com/wells1137/puresnap"}' \
             || echo "agentskill.sh submission attempted"
         continue-on-error: true
 

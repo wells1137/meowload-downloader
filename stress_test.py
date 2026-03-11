@@ -15,7 +15,7 @@ Skills 下载量压测脚本
   python3 stress_test.py --proxy-file proxies.txt -c 30 -n 200
 
   # 自定义仓库
-  python3 stress_test.py --repo wells1137/meowload-downloader
+  python3 stress_test.py --repo wells1137/puresnap
 """
 
 import argparse
@@ -38,7 +38,7 @@ except ImportError:
     import aiohttp
 
 
-REPO = "wells1137/meowload-downloader"
+REPO = "wells1137/puresnap"
 CLONE_URL = "https://github.com/{repo}.git"
 ARCHIVE_URL = "https://github.com/{repo}/archive/refs/heads/main.zip"
 API_TRAFFIC_URL = "https://api.github.com/repos/{repo}/traffic/clones"

@@ -72,7 +72,7 @@ Remove Sora watermark: https://sora.chatgpt.com/p/s_xxxxx
 
 ```bash
 # skills.sh
-npx skills add wells1137/meowload-downloader
+npx skills add wells1137/puresnap
 
 # Sundial Hub
 npx sundial-hub add wells1137/puresnap
@@ -84,7 +84,7 @@ clawdhub install puresnap
 localskills install kew9C6g570
 
 # Playbooks
-npx playbooks add skill wells1137/meowload-downloader
+npx playbooks add skill wells1137/puresnap
 ```
 
 ## Features

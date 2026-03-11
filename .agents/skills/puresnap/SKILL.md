@@ -10,7 +10,7 @@ description: >
   images, audio, subtitles. Zero config, built-in API key. Use when the user
   wants to download or save any video/image/audio from a social media URL,
   remove watermarks, rip media, or extract content from any link.
-homepage: https://github.com/wells1137/meowload-downloader
+homepage: https://github.com/wells1137/puresnap
 license: MIT
 tags:
   - video-downloader
